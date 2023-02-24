@@ -7,7 +7,7 @@ using namespace std;
 
 struct pessoa{;
     string nome;
-    int rg;
+    int re;
 };
 
 
