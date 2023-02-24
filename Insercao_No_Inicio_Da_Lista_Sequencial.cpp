@@ -124,11 +124,26 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
            cout << "digite um rg:";
            cin >> rg;
 
-           adcComecoInicial( ponteiroSequencial, &tamanhoDalista, nome, rg);
+           adcComecoInicial(ponteiroSequencial, &tamanhoDalista, nome, rg);
         break;
 
          case 2:
-           cout << "Funcao escolhida: 2 \n";
+           cout << "Funcao escolhida: 2 - Insercao de um node no fim da lista \n";
+
+           cout << "Digite um nome:";
+           cin >> nome;
+           cout << "digite um rg:";
+           cin >> rg;
+
+           //Se a lista for vazia uso a função de criar no inicio
+           if(tamanhoDalista == 0){
+            adcComecoInicial(ponteiroSequencial, &tamanhoDalista, nome, rg);
+           }else{
+
+           }
+
+
+
         break;
 
   }
