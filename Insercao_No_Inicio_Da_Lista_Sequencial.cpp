@@ -81,7 +81,11 @@ ponteiroSequencial = novaListaSequencial;
    novaListaSequencial[*tamanhoDalista].nome = nome;
    novaListaSequencial[*tamanhoDalista].rg = rg;
 
+    //Atualiza o ponteiro para a lista nova
+    ponteiroSequencial = novaListaSequencial;
 
+    //Aumenta o tamanho da lista
+   *tamanhoDalista = *tamanhoDalista + 1;
 
 
  }
