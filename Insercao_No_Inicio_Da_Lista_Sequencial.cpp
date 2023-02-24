@@ -65,6 +65,28 @@ ponteiroSequencial = novaListaSequencial;
  }
 
 
+
+ void adcFimInicial( pessoa *&ponteiroSequencial, int *tamanhoDalista, string nome, int rg){
+
+ //Cria uma lista com o tamanho maior
+ pessoa *novaListaSequencial = new pessoa[*tamanhoDalista + 1];
+
+  //Passa os elementos do vetor antigo para o novo
+   int cont;
+   for(cont = 0; cont < *tamanhoDalista; cont++ ){
+    novaListaSequencial[cont].nome = ponteiroSequencial[cont].nome;
+    novaListaSequencial[cont].rg = ponteiroSequencial[cont].rg;
+}
+   //Posiciona o ultimo elemento
+   novaListaSequencial[*tamanhoDalista].nome = nome;
+   novaListaSequencial[*tamanhoDalista].rg = rg;
+
+
+
+
+ }
+
+
 int main(){
 
   int funcaoDesejada = 1;
@@ -139,9 +161,8 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
            if(tamanhoDalista == 0){
             adcComecoInicial(ponteiroSequencial, &tamanhoDalista, nome, rg);
            }else{
-
-           }
-
+            adcFimInicial(ponteiroSequencial, &tamanhoDalista, nome, rg);
+            }
 
 
         break;
