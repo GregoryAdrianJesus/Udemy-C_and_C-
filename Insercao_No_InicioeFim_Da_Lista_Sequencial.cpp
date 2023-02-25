@@ -90,6 +90,39 @@ ponteiroSequencial = novaListaSequencial;
 
  }
 
+ void adcPosicaoSequencial( pessoa *&ponteiroSequencial, int *tamanhoDalista, string nome, int rg, int posicao){
+
+ //Cria uma lista com o tamanho maior
+ pessoa *novaListaSequencial = new pessoa[*tamanhoDalista + 1];
+
+ //Passa os elementos do vetor antigo para o novo
+   int cont;
+   for(cont = 0; cont < posicao; cont++ ){
+    novaListaSequencial[cont].nome = ponteiroSequencial[cont].nome;
+    novaListaSequencial[cont].rg = ponteiroSequencial[cont].rg;
+}
+
+ //Adiciona o novo registro na posição correta
+    novaListaSequencial[posicao].nome = ponteiroSequencial[cont].nome;
+    novaListaSequencial[posicao].rg = ponteiroSequencial[cont].rg;
+
+//Coloca o resto dos valores antigos
+
+  for(cont = posicao + 1; cont < *tamanhoDalista + 1; cont++ ){
+    novaListaSequencial[cont].nome = ponteiroSequencial[cont - 1].nome;
+    novaListaSequencial[cont].rg = ponteiroSequencial[cont - 1].rg;
+}
+
+  //Atualiza o ponteiro para a lista nova
+    ponteiroSequencial = novaListaSequencial;
+
+    //Aumenta o tamanho da lista
+   *tamanhoDalista = *tamanhoDalista + 1;
+
+
+
+ }
+
 
 int main(){
 
@@ -185,7 +218,10 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
           }else if(posicao == tamanhoDalista){
               //Se estiver adicionado no final
               adcFimInicial(ponteiroSequencial, &tamanhoDalista, nome, rg);
-          }else
+          }else{
+              //Adiciona uma posição especifica
+              adcPosicaoSequencial(ponteiroSequencial, &tamanhoDalista, nome, rg, posicao);
+        }
 
           break;
 
