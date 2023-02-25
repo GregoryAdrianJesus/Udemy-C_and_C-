@@ -204,7 +204,7 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
          case 3:
             cout << "Funcao escolhida:  3 - Insercao de um node na posição N \n";
 
-           cout << "digite uma posicao";
+           cout << "digite uma posicao:";
            cin >> posicao;
            cout << "Digite um nome:";
            cin >> nome;
