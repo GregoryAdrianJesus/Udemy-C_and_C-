@@ -124,12 +124,23 @@ ponteiroSequencial = novaListaSequencial;
 void removeInicioSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista){
 
  //Cria um vetor com uma posição a menos
- pessoa *novaListaSequencial = new pessoa[*tamnhoDaLista - 1];
+ pessoa *novaListaSequencial = new pessoa[*tamanhoDalista - 1];
 
+ //Passa os elementos do vetor antigo para o novo
+   int cont;
+   for(cont = 1; cont < *tamanhoDalista; cont++ ){
+    novaListaSequencial[cont-1].nome = ponteiroSequencial[cont].nome;
+    novaListaSequencial[cont-1].rg = ponteiroSequencial[cont].rg;
+}
+
+   //Atualiza o ponteiro para a lista nova
+    ponteiroSequencial = novaListaSequencial;
+
+    //Reduzo tamanho da lista
+   *tamanhoDalista = *tamanhoDalista - 1;
 
 
 }
-
 
 int main(){
 
