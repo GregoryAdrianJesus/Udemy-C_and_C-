@@ -64,8 +64,6 @@ ponteiroSequencial = novaListaSequencial;
 
  }
 
-
-
  void adcFimInicial( pessoa *&ponteiroSequencial, int *tamanhoDalista, string nome, int rg){
 
  //Cria uma lista com o tamanho maior
@@ -122,6 +120,15 @@ ponteiroSequencial = novaListaSequencial;
 
 
  }
+
+void removeInicioSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista){
+
+ //Cria um vetor com uma posição a menos
+ pessoa *novaListaSequencial = new pessoa[*tamnhoDaLista - 1];
+
+
+
+}
 
 
 int main(){
@@ -232,7 +239,7 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
            //Caso a lista for vazia
            if(tamanhoDalista == 0){
            }else{
-               removeInicioSequencial(ponteiroSequencial, &tamanhoDalista.)
+               removeInicioSequencial(ponteiroSequencial, &tamanhoDalista);
            }
 
 
