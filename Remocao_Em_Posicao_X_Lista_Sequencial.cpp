@@ -158,12 +158,14 @@ void removeFimSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista){
     ponteiroSequencial = novaListaSequencial;
 
     //Reduzo tamanho da lista
-   *tamanhoDalista = *tamanhoDalista -void removeFimSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista
+    *tamanhoDalista = *tamanhoDalista -1;
 
-void removeFimSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, int posicao){
+}
+
+void removePosicaoSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, int posicao){
 
   //Cria um vetor com uma posição a menos
- pessoa *novaListaSequencial = new pessoa[*tamanhoDalista - 1]
+ pessoa *novaListaSequencial = new pessoa[*tamanhoDalista - 1];
 
  //Passa os valores de acordo com o contador
   int cont;
@@ -179,13 +181,14 @@ void removeFimSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, int p
      novaListaSequencial[cont].rg = ponteiroSequencial[cont + 1].rg;
     }
 
-     //Atualiza o ponteiro para a lista nova
+  }
+
+  //Atualiza o ponteiro para a lista nova
     ponteiroSequencial = novaListaSequencial;
 
     //Reduzo tamanho da lista
    *tamanhoDalista = *tamanhoDalista - 1;
 
-  }
 
 }
 
@@ -326,17 +329,23 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
                cout << "digite uma posicao:";
                cin >> posicao;
 
+               if(posicao == 0){
+                 removeInicioSequencial(ponteiroSequencial, &tamanhoDalista);
+               }else if(posicao == tamanhoDalista -1) {
+                 removeFimSequencial(ponteiroSequencial, &tamanhoDalista);
+               }else{
                removePosicaoSequencial(ponteiroSequencial, &tamanhoDalista, posicao);
-           }
+               }
 
-           break;
+            }
+            break;
 
-
+          }
 
 
   }
 
-}
+
 
 return 0;
 }
