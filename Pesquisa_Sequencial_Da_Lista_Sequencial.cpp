@@ -232,9 +232,8 @@ int main(){
     ponteiroSequencial = exemploListaSequencial;
 
 
-while(funcaoDesejada < 10 && funcaoDesejada > 0){
+while(funcaoDesejada < 9 && funcaoDesejada > 0){
 
- imprimeSequencial(ponteiroSequencial, tamanhoDalista );
 
         //Mostrando o menu
  cout << " Operacoes \n";
@@ -373,6 +372,13 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
             }
             break;
 
+
+         case 8:
+            cout << "Funcao Escolhida: 8 - Imprimir a Lista. \n";
+
+            imprimeSequencial(ponteiroSequencial, tamanhoDalista);
+
+            break;
           }
 
 
