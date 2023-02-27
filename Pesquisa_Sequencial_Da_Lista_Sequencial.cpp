@@ -194,6 +194,17 @@ void removePosicaoSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, i
 
  string retornaNomeSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, int rg){
 
+   string nome = "Não Encontrado";
+
+  //Busca pelo nome com o RG digitado
+  int cont;
+  for(cont = 0; cont < *tamanhoDalista; cont++){
+
+    if(ponteiroSequencial[cont].rg == rg){
+        nome = ponteiroSequencial[cont].nome;
+    }
+
+  }
 
  }
 
