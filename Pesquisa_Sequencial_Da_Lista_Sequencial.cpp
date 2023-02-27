@@ -194,7 +194,7 @@ void removePosicaoSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, i
 
  string retornaNomeSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, int rg){
 
-   string nome = "Não Encontrado";
+   string nome = "Nao Encontrado";
 
   //Busca pelo nome com o RG digitado
   int cont;
@@ -205,7 +205,7 @@ void removePosicaoSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, i
     }
 
   }
-
+   return nome;
  }
 
 
@@ -369,7 +369,7 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
                cout << "digite um RG:";
                cin >> rg;
 
-            cout << "Nome:" << retornaNomeSequencial(ponteiroSequencial, &tamanhoDalista, rg);
+            cout << "\nNome do RG " << rg << ":" << retornaNomeSequencial(ponteiroSequencial, &tamanhoDalista, rg) << "\n";
             }
             break;
 
