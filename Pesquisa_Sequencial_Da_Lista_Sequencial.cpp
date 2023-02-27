@@ -192,6 +192,12 @@ void removePosicaoSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, i
 
 }
 
+ string retornaNomeSequencial(pessoa *&ponteiroSequencial, int *tamanhoDalista, int rg){
+
+
+ }
+
+
 int main(){
 
   int funcaoDesejada = 1;
@@ -337,6 +343,22 @@ while(funcaoDesejada < 10 && funcaoDesejada > 0){
                removePosicaoSequencial(ponteiroSequencial, &tamanhoDalista, posicao);
                }
 
+            }
+            break;
+
+
+         case 7:
+              cout << "funcao escolhida: 7 - procurar um node com o campo RG \n";
+
+             //Caso a lista for vazia
+           if(tamanhoDalista == 0){
+             cout << " Lista Vazia \n";
+           }else{
+
+               cout << "digite um RG:";
+               cin >> rg;
+
+            cout << "Nome:" << retornaNomeSequencial(ponteiroSequencial, &tamanhoDalista, rg);
             }
             break;
 
